@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import Products from './Products';
+import Forums from './Forums';
 
 function App() {
   return (
+    // eslint-disable-next-line react/jsx-filename-extension
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <NavLink activeClassName="active" className="links" to="/products">
+          Products
+        </NavLink>
+        <NavLink activeClassName="active" className="links" to="/forums">
+          Forums
+        </NavLink>
+        <Routes>
+          <Route path="/products" element={<Products />} />
+          <Route path="/forums" element={<Forums />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

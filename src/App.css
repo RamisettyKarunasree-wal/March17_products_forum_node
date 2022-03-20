@@ -1,38 +1,114 @@
-.App {
+.products-form,
+.products-list,
+.forums-form,
+.forums-list {
+  padding: 10px;
+  background-color: rgb(214, 166, 204);
+  margin: 20px;
+  width: 50%;
+  text-align: center;
+  box-shadow: 4px 4px 4px black;
+}
+.products-list-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.products-container {
+  display: flex;
+  flex-direction: row;
+}
+button,
+input,
+select,
+textarea {
+  padding: 10px;
+  margin: 5px;
+  width: 50%;
+}
+h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  border-bottom: 3px solid maroon;
+}
+button {
+  color: white;
+  background: linear-gradient(blue, black);
+}
+button:hover {
+  background: linear-gradient(black, blue);
+}
+.products-item,
+.forums-item {
+  text-align: left;
+  background: white;
+  width: 30%;
+  padding: 5px;
+  margin: 5px;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 5px;
+}
+.forums-item {
+  width: 70%;
+  margin: 2px auto;
+}
+.name {
+  font-weight: bold;
+}
+.price {
+  font-size: 20px;
+  color: blue;
+}
+.description {
+  color: grey;
+}
+.forums-form {
+  margin: 20px auto;
+}
+.forums-list {
+  width: auto;
+}
+.forum-info {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.author,
+.date,
+.forum-del-button {
+  width: 33%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.forum-del-button button {
+  margin: 0;
+  padding: 2px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.body {
+  color: grey;
+}
+.error {
+  color: red;
+}
+.links {
+  margin: 10px;
   color: white;
+  background-color: black;
+  border-radius: 10px;
+  padding: 10px;
+  text-decoration: none;
 }
-
-.App-link {
-  color: #61dafb;
+.links:hover {
+  border: 3px solid white;
+  background-color: rgb(66, 54, 54);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.active {
+  box-shadow: 3px 3px 3px wheat;
+}
+.App {
+  padding: 20px;
 }
